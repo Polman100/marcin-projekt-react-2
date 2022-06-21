@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,78 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+html, body {
+  background-color: rgb(221, 211, 211);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  background-color: rgb(184, 183, 183);
+  display: flex;
+  height: 210px;
+  width: 700px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  border: 5px solid;
+  /* overflow: hidden; */
+}
+
+.top-line {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: rgb(184, 183, 183);
+  width: 700px;
+}
+
+.bottom-line {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-color: rgb(184, 183, 183);
+  width: 700px;
+}
+
+.logo {
+  max-width: 90px;
+  max-height: 80px;
+  margin: 10px 40px 0 0;
+  border: 2px solid;
+}
+
+.converter-header {
+  text-align: center;
+  margin-bottom: auto;
+  margin-top: auto;
+  width: 400px;
+  border: 2px solid black;
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+.input-field,
+.currencies,
+.button {
+  height: 40px;
+  margin: 30px auto;
+}
+
+.text {
+  font-size: large;
+  margin: 30px;
+}
+
+.result {
+  font-weight: bold;
+  margin: auto 0 auto 30px;
 }
