@@ -1,11 +1,3 @@
-import './App.css';
-import BottomLine from './Components/BottomLine';
-import TopLine from './Components/TopLine';
-
-// import {qs, create, appendToElement} from './Components/HelperFunctions';
-// import DOMContentLoadedListner from './Components/DOMContentLoadedListner';
-// import CurrencyOption from './Components/CurrencyOption';
-
 // helper function
 const qs = (s) => document.querySelector(s);
 const create = (s) => document.createElement(s);
@@ -37,7 +29,7 @@ function preventNaN (x) {
 document.addEventListener("DOMContentLoaded", function() {
     const url = 'https://api.nbp.pl/api/exchangerates/tables/a';
 
-    fetch(url)
+    fetchData = fetch(url)
     .then((response) => response.json())
     .then((data) => {
         console.log(data[0].rates);
@@ -92,16 +84,6 @@ button.addEventListener("click", (e) => {
 
 })
 
-
-function App() {
-
-  // document.addEventListener("DOMContentLoaded", DOMContentLoadedListner())
-  return (
-    <div className="container">
-      <TopLine />
-      <BottomLine />
-    </div>
-  );
-}
-
-export default App;
+// select.addEventListener("click", (e) => {
+//     console.log(e.value);
+//     })
