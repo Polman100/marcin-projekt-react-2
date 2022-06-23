@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import { roundToHundredth } from '../functions/roundToHundredth';
+import { preventNaN } from '../functions/preventNaN';
+
 const url = "https://api.nbp.pl/api/exchangerates/tables/a";
+
 
 const CurrencyCalculationForm = () => {
 
@@ -41,7 +45,7 @@ return (
   </select>
   <input type="submit" value="Przelicz" className="button" />
   <span className="text">TO</span>
-  <span className="result">{outcome} PLN</span>          
+  <span className="result">{ preventNaN(roundToHundredth(outcome)+ " PLN") }</span>          
   </form>
 )
 }
