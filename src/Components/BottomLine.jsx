@@ -1,10 +1,10 @@
 import React from 'react'
-import Form from './Form'
+import CurrencyCalculationForm from './CurrencyCalculationForm'
 
 const BottomLine = () => {
   return (
     <div className="bottom-line">
-        <Form />
+        <CurrencyCalculationForm />
     </div>
   )
 }
