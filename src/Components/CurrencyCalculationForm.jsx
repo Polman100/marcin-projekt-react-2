@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { roundToHundredth } from '../functions/roundToHundredth';
 import { preventNaN } from '../functions/preventNaN';
 
@@ -8,12 +8,9 @@ const url = "https://api.nbp.pl/api/exchangerates/tables/a";
 const CurrencyCalculationForm = () => {
 
   const [currency, setCurrency] = useState(null);
-  
-  const [userInput, setUserInput] = useState(0)
-
-  const [currencySelected, setCurrencySelected] = useState("")
-
-  const [outcome, setOutcome] = useState(0)
+  const [userInput, setUserInput] = useState(0);
+  const [currencySelected, setCurrencySelected] = useState("");
+  const [outcome, setOutcome] = useState(0);
 
   useEffect(() => {
     fetch(url)
@@ -31,7 +28,7 @@ const CurrencyCalculationForm = () => {
       setOutcome( userInput * currencySelected)
     }
     else {return}
-  }
+  };
 
 return (
   <form className="converter-form" onSubmit={computeOutcome}>
@@ -41,14 +38,13 @@ return (
     {currency?.map(({code, mid}) => {
       return (
         <option key={code} value={mid}> {code} </option>
-      ) })}
+      )})}
   </select>
   <input type="submit" value="Przelicz" className="button" />
   <span className="text">TO</span>
   <span className="result">{ preventNaN(roundToHundredth(outcome)+ " PLN") }</span>          
   </form>
-)
-}
+)};
 
 export default CurrencyCalculationForm
 
