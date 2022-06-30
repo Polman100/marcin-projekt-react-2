@@ -1,12 +1,12 @@
-import React from 'react'
-import CurrencyCalculationForm from './CurrencyCalculationForm'
+import React from "react";
+import CurrencyCalculationForm from "./CurrencyCalculationForm";
 
 const BottomLine = () => {
   return (
     <div className="bottom-line">
-        <CurrencyCalculationForm />
+      <CurrencyCalculationForm />
     </div>
-  )
-}
+  );
+};
 
-export default BottomLine
+export default BottomLine;

@@ -1,7 +1,6 @@
-import './App.css';
-import BottomLine from './Components/BottomLine';
-import TopLine from './Components/TopLine';
-
+import "./App.css";
+import BottomLine from "./Components/BottomLine";
+import TopLine from "./Components/TopLine";
 
 function App() {
   return (
